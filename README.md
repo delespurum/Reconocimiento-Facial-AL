@@ -1,4 +1,4 @@
-# Sistema de Reconocimiento Facial para Control de Acceso: PCA (Eigenfaces) vs LDA (Fisherfaces)
+# INFORME: Sistema de Reconocimiento Facial para Control de Acceso: PCA (Eigenfaces) vs LDA (Fisherfaces)
 
 **Álgebra Lineal Aplicada 2026-I**  
 Daniela Eléspuru

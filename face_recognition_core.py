@@ -47,9 +47,9 @@ class PCAModel:
     def __init__(self, n_components: int = 40):
         self.k = n_components
         self.mean_face: np.ndarray | None = None
-        self.eigenfaces: np.ndarray | None = None      # (D, k)
+        self.eigenfaces: np.ndarray | None = None     
         self.singular_values: np.ndarray | None = None
-        self.projections: np.ndarray | None = None     # (N, k) — galería de autorizados
+        self.projections: np.ndarray | None = None     # autorizados
         self.labels: np.ndarray | None = None
         self.variance_explained: np.ndarray | None = None
 
@@ -62,13 +62,13 @@ class PCAModel:
         U, s, Vt = np.linalg.svd(X_c, full_matrices=False)
 
         self.singular_values = s
-        self.eigenfaces = Vt[:self.k].T  # (D, k)  — primeros k eigenfaces
+        self.eigenfaces = Vt[:self.k].T  #eigenfaces
 
         # var
         total_var = np.sum(s ** 2)
         self.variance_explained = (s ** 2) / total_var
 
-        self.projections = X_c @ self.eigenfaces  # (N, k)
+        self.projections = X_c @ self.eigenfaces 
         self.labels = y
 
     def project(self, x: np.ndarray) -> np.ndarray:
@@ -108,12 +108,12 @@ class LDAModel:
         X_c = X - self.mean_face
         _, s, Vt = np.linalg.svd(X_c, full_matrices=False)
         M = min(N - C, D - 1)
-        W_pca = Vt[:M].T          # (D, M)
-        X_pca = X_c @ W_pca       # (N, M)
+        W_pca = Vt[:M].T          
+        X_pca = X_c @ W_pca       
         self._pca_W = W_pca
         self._pca_mean = self.mean_face
 
-        mu_total = X_pca.mean(axis=0)  # (M,)
+        mu_total = X_pca.mean(axis=0)  
 
         S_W = np.zeros((M, M))
         S_B = np.zeros((M, M))
@@ -129,7 +129,7 @@ class LDAModel:
             delta = (mu_c - mu_total).reshape(-1, 1)
             S_B += n_c * (delta @ delta.T)
 
-        S_W_inv = np.linalg.inv(S_W + np.eye(M) * 1e-8)  # regularización leve
+        S_W_inv = np.linalg.inv(S_W + np.eye(M) * 1e-8)  # reg
         A = S_W_inv @ S_B
 
         eigenvalues, eigenvectors = np.linalg.eig(A)
@@ -138,10 +138,10 @@ class LDAModel:
         eigenvectors = eigenvectors.real
         idx_sorted = np.argsort(eigenvalues)[::-1]
         k_actual = min(self.k, C - 1)
-        W_fisher = eigenvectors[:, idx_sorted[:k_actual]]  # (M, k)
+        W_fisher = eigenvectors[:, idx_sorted[:k_actual]]  
 
-        self.W = W_pca @ W_fisher      # (D, k)
-        self.projections = X_c @ self.W  # (N, k)  — centrado respecto a mean_face original
+        self.W = W_pca @ W_fisher      
+        self.projections = X_c @ self.W  
         X_orig_c = X - self.mean_face
         self.projections = X_orig_c @ self.W
         self.labels = y
@@ -172,13 +172,13 @@ def calibrate_threshold(model, X_train: np.ndarray, y_train: np.ndarray,
     dists = []
 
     for i in range(len(X_train)):
-        # Proyección de la imagen i
+        
         z_i = projections[i]
         y_i = y_train[i]
 
-        # Distancias a imágenes de la misma clase (excluyendo i misma)
+        
         same_class = (y_train == y_i)
-        same_class[i] = False  # excluir i misma
+        same_class[i] = False  
 
         if same_class.sum() == 0:
             continue

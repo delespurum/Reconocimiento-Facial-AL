@@ -344,4 +344,7 @@ Los resultados se guardan en `results/` y las figuras en `results/figures/`.
 
 4. F. L. Gewers et al., "Principal Component Analysis: A Natural Approach to Data Exploration," *arXiv preprint* arXiv:1804.02502, 2018.
 
+5. A. Tharwat, T. Gaber, A. Ibrahim y A. E. Hassanien, “Linear Discriminant Analysis: A Detailed Tutorial,” AI Communications, vol. 30, no. 2, pp. 169–190, 2017.
+
+6. Y. Li, Linear Discriminant Analysis and its Application to Face Identification, Ph.D. dissertation, University of Surrey, 2000.
 

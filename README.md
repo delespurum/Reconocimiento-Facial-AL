@@ -336,17 +336,12 @@ Los resultados se guardan en `results/` y las figuras en `results/figures/`.
 
 ## 9. Referencias
 
-[1] M. Turk y A. Pentland, "Eigenfaces for Recognition," *Journal of Cognitive Neuroscience*, vol. 3, no. 1, pp. 71–86, 1991.
+1. M. Turk y A. Pentland, "Eigenfaces for Recognition," *Journal of Cognitive Neuroscience*, vol. 3, no. 1, pp. 71–86, 1991.
 
-[2] P. N. Belhumeur, J. P. Hespanha y D. J. Kriegman, "Eigenfaces vs. Fisherfaces: Recognition Using Class Specific Linear Projection," *IEEE Transactions on Pattern Analysis and Machine Intelligence*, vol. 19, no. 7, pp. 711–720, 1997.
+2. I. T. Jolliffe y J. Cadima, "Principal component analysis: a review and recent developments," *Philosophical Transactions of the Royal Society A*, vol. 374, no. 2065, 2016.
 
-[3] I. T. Jolliffe y J. Cadima, "Principal component analysis: a review and recent developments," *Philosophical Transactions of the Royal Society A*, vol. 374, no. 2065, 2016.
+3. J. Shlens, "A Tutorial on Principal Component Analysis," *arXiv preprint* arXiv:1404.1100, 2014.
 
-[4] J. Shlens, "A Tutorial on Principal Component Analysis," *arXiv preprint* arXiv:1404.1100, 2014.
+4. F. L. Gewers et al., "Principal Component Analysis: A Natural Approach to Data Exploration," *arXiv preprint* arXiv:1804.02502, 2018.
 
-[5] F. L. Gewers et al., "Principal Component Analysis: A Natural Approach to Data Exploration," *arXiv preprint* arXiv:1804.02502, 2018.
-
-[6] G. H. Golub y C. F. Van Loan, *Matrix Computations*, 4.ª ed. Johns Hopkins University Press, 2013.
-
-[7] R. O. Duda, P. E. Hart y D. G. Stork, *Pattern Classification*, 2.ª ed. Wiley-Interscience, 2001.
 

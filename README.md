@@ -1,8 +1,7 @@
-# Sistema de Reconocimiento Facial para Control de Acceso
-## PCA (Eigenfaces) vs LDA (Fisherfaces) — Implementación desde Cero con NumPy
+# Sistema de Reconocimiento Facial para Control de Acceso: PCA (Eigenfaces) vs LDA (Fisherfaces)
 
-**Álgebra Lineal Aplicada · Universidad del Pacífico · 2026-I**  
-**Autora:** Daniela Eléspuru
+**Álgebra Lineal Aplicada 2026-I**  
+Daniela Eléspuru
 
 ---
 

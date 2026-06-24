@@ -153,10 +153,6 @@ Ambos métodos comparten el mismo clasificador de vecino más cercano:
 
 $$d(\mathbf{x}_{test}, \mathbf{x}_j) = \sqrt{\sum_{i=1}^{k}(z_{test,i} - z_{j,i})^2}$$
 
-El umbral $\tau$ se calibra mediante validación cruzada leave-one-out sobre las imágenes de entrenamiento:
-
-$$\tau = 3.5 \cdot \text{percentil}_{95}\bigl\{ d_{LOO}(i) \bigr\}_{i=1}^{N}$$
-
 ---
 
 ## 4. Metodología
@@ -355,6 +351,3 @@ Los resultados se guardan en `results/` y las figuras en `results/figures/`.
 
 [7] R. O. Duda, P. E. Hart y D. G. Stork, *Pattern Classification*, 2.ª ed. Wiley-Interscience, 2001.
 
----
-
-*Universidad del Pacífico · Ingeniería de Información · Álgebra Lineal Aplicada 2026-I*
